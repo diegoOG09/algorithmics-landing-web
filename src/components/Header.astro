@@ -5,17 +5,41 @@ import menuItems from '../data/MenuItems';
 ---
 
 <header>
-  <a href="/"><img src="/assets/logo_header.svg" alt="Logo"></a>
-  <MenuView >
-    {
-      menuItems.map(item => <MenuItemView {...item} />)
-    }
-  </MenuView>
+  <div class="header-content container">
+    <div class="logo-content">
+      <a class="logo" href="/">
+        <img src="/assets/logo_header.svg" alt="Logo">
+      </a>
+      <span>Escuela internacional <br> de programación</span>
+    </div>
+    
+    <MenuView >
+      {
+        menuItems.map(item => <MenuItemView {...item} />)
+      }
+    </MenuView>
+  </div>
 </header>
 
 <style lang="scss">
   header {
-    display: flex;
-    
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 3rem;
+
+      .logo-content {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: .8rem;
+          color: black;
+        }
+      }
+    }
   }
 </style>
