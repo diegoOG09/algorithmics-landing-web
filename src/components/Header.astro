@@ -1,0 +1,21 @@
+---
+import MenuView from "./MenuView.astro";
+import MenuItemView from '../components/menuItemView.astro';
+import menuItems from '../data/MenuItems';
+---
+
+<header>
+  <a href="/"><img src="/assets/logo_header.svg" alt="Logo"></a>
+  <MenuView >
+    {
+      menuItems.map(item => <MenuItemView {...item} />)
+    }
+  </MenuView>
+</header>
+
+<style lang="scss">
+  header {
+    display: flex;
+    
+  }
+</style>
