@@ -1,0 +1,10 @@
+---
+import type { CoursesItem } from "../types/types";
+interface Props extends CoursesItem {};
+const { age, course } = Astro.props
+---
+
+<div>
+  <span>{age}</span>
+  <h3>{course}</h3>
+</div>

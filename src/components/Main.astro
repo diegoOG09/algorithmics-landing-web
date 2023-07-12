@@ -1,9 +1,26 @@
-<section>
+---
+import CoursesView from "./CoursesView.astro";
+import CourseItemView from "./CourseItemView.astro";
+import coursesItems from "../data/CoursesItems";
+---
+
+<section class="video">
   <video src="/assets/Background.mp4" autoplay loop muted></video>
 </section>
 
+<main class="container" id="main">
+  <div class="big-card">
+    <h1>Nuestros cursos</h1>
+    <CoursesView>
+      {
+        coursesItems.map(item => <CourseItemView {...item} />)
+      }
+    </CoursesView>
+  </div>
+</main>
+
 <style lang="scss">
-  section {
+  .video {
     position: relative;
     z-index: 1;
     video {
@@ -13,5 +30,22 @@
       width: 100%;
       widows: 100%;
     }
+  }
+
+  #main {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .big-card {
+      backdrop-filter: blur(20px);
+      height: 30rem;
+      border-radius: 20px;
+      h1 {
+      color: white;
+    }
+    }
+    
   }
 </style>
