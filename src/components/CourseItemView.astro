@@ -3,21 +3,28 @@ import type { CoursesItem } from "../types/types";
 interface Props extends CoursesItem {};
 const { age, course, image } = Astro.props
 ---
-
-<div class="course">
-  <div class="meta-inf">
-    <span>{age}</span>
-    <div class="img-container">
-      <img src={image} alt="">
+<a class="course" id="course" href="#">
+  <div >
+    <div class="meta-inf">
+      <span>{age}</span>
+      <div class="img-container">
+        <img src={image} alt="">
+      </div>
     </div>
+    <h3>{course}</h3>
   </div>
-  <h3>{course}</h3>
-</div>
+</a>
+
 
 <style lang="scss">
   .course {
     border-radius: 20px;
     padding: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: translate(-7px, -10px);
+    }
     .meta-inf {
       display: flex;
       flex-direction: column;
