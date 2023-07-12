@@ -1,10 +1,77 @@
 ---
 import type { CoursesItem } from "../types/types";
 interface Props extends CoursesItem {};
-const { age, course } = Astro.props
+const { age, course, image } = Astro.props
 ---
 
-<div>
-  <span>{age}</span>
+<div class="course">
+  <div class="meta-inf">
+    <span>{age}</span>
+    <div class="img-container">
+      <img src={image} alt="">
+    </div>
+  </div>
   <h3>{course}</h3>
 </div>
+
+<style lang="scss">
+  .course {
+    border-radius: 20px;
+    padding: 1rem;
+    .meta-inf {
+      display: flex;
+      flex-direction: column;
+      .img-container {
+        height: 5rem;
+        margin-bottom: 6rem;
+        margin-top: 2rem;
+        img {
+          width: 50%;
+        }
+      }
+    }
+    span {
+      color: #602b7a;
+      font-weight: 500;
+    }
+    h3 {
+      margin: 0;
+      color: #602b7a;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+    &:nth-child(1) {
+      background-color: #F3FF69;
+    }
+    &:nth-child(2) {
+      background-color: #F44C75;
+    }
+    &:nth-child(3) {
+      .img-container {
+        img {
+          width: 40%;
+        }
+      }
+      background-color: #FFDB59;
+    }
+    &:nth-child(4) {
+      span {
+        color: white;
+      }
+      h3 {
+        color: white;
+      }
+      background-color: #8D30B9;
+    }
+    &:nth-child(5) {
+      span {
+        color: white;
+      }
+      h3 {
+        color: white;
+      }
+      background-color: #491A60;
+    }
+
+  }
+</style>

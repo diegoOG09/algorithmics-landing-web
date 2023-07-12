@@ -6,4 +6,5 @@ export interface MenuItem {
 export interface CoursesItem {
   age: string;
   course: string;
+  image: string;
 }

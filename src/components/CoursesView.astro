@@ -1,3 +1,11 @@
 <div class="courses">
-  <slot class="course" />
+  <slot />
 </div>
+
+<style lang="scss">
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
+</style>
