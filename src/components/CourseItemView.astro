@@ -7,19 +7,17 @@ const { age, course, image } = Astro.props
   <div >
     <div class="meta-inf">
       <span>{age}</span>
-      <div class="img-container">
-        <img src={image} alt="">
-      </div>
+        <img src={image} alt="Imagen del curso">
+      <h3>{course}</h3>
     </div>
-    <h3>{course}</h3>
   </div>
 </a>
-
 
 <style lang="scss">
   .course {
     border-radius: 20px;
     padding: 1rem;
+    height: 12rem;
     text-decoration: none;
     transition: transform 0.2s ease-in-out;
     &:hover {
@@ -28,13 +26,10 @@ const { age, course, image } = Astro.props
     .meta-inf {
       display: flex;
       flex-direction: column;
-      .img-container {
-        height: 5rem;
-        margin-bottom: 6rem;
-        margin-top: 2rem;
-        img {
-          width: 50%;
-        }
+      align-items: center;
+      margin-bottom: 5rem;
+      img {
+        width: 10rem;
       }
     }
     span {
@@ -44,41 +39,87 @@ const { age, course, image } = Astro.props
     h3 {
       margin: 0;
       color: #602b7a;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       text-transform: uppercase;
     }
     &:nth-child(1) {
-      background-color: #F3FF69;
+      background-color: #24A7EF;
+      img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
     }
     &:nth-child(2) {
       background-color: #F44C75;
+      img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
     }
     &:nth-child(3) {
-      .img-container {
-        img {
-          width: 40%;
-        }
-      }
       background-color: #FFDB59;
+      img {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        width: 8rem;
+      }
     }
     &:nth-child(4) {
       span {
-        color: white;
+        color: #602b7a;
+      }
+      img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 8rem;
       }
       h3 {
-        color: white;
+        color: #602b7a;
       }
-      background-color: #8D30B9;
+      background-color: #CBF86D;
     }
     &:nth-child(5) {
       span {
         color: white;
+      }
+      img {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        width: 8rem;
       }
       h3 {
         color: white;
       }
       background-color: #491A60;
     }
-
+    &:nth-child(6) {
+      span {
+        color: white;
+      }
+      img {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        width: 8rem;
+      }
+      h3 {
+        color: white;
+      }
+      background-color: #491A60;
+    }
+    &:nth-child(7) {
+      span {
+        color: white;
+      }
+      img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 8rem;
+      }
+      h3 {
+        text-align: center;
+        color: white;
+      }
+      background-color: #491A60;
+    }
   }
 </style>

@@ -2,29 +2,39 @@ import type { CoursesItem } from "../types/types";
 
 const coursesItems : CoursesItem[] = [
   {
-    age: 'Para 6-7 años',
-    course: 'Fundamentos de lógica y programación',
-    image: '/assets/fundamentos.png'
+    age: 'Para niños de 7-9 años',
+    course: 'Alfabetización Digital',
+    image: '/assets/banners/alfabetizacion-digital-removebg.png'
   },
   {
-    age: 'Para 9-10 años',
+    age: 'Para niños 9-10 años',
     course: 'Programación visual',
-    image: '/assets/programacion-visual.png'
+    image: '/assets/banners/programacion-visual-removebg.png'
   },
   {
-    age: 'Para 10-11 años',
+    age: 'Para niños de 10-11 años',
     course: 'Diseño de videojuegos',
-    image: '/assets/videojuegos.png'
+    image: '/assets/banners/diseño-videojuegos-removebg.png'
+  },
+  {
+    age: 'Para niños de 10-11 años',
+    course: 'Creación de Sitios Web',
+    image: '/assets/banners/creacion-sitios-web-removebg.png'
   },
   {
     age: 'Para 12-13 años',
     course: 'Python Start',
-    image: '/assets/python-start.png'
+    image: '/assets/banners/python-start-removebg.png'
   },
   {
     age: 'Para 14-17 años',
     course: 'Python Pro',
-    image: '/assets/python-pro.png'
+    image: '/assets/banners/python-pro-removebg.png'
+  },
+  {
+    age: 'Para 12-16 años',
+    course: 'Unity - Creación de Videojuegos',
+    image: '/assets/banners/unity-removebg.png'
   }
 ]
 

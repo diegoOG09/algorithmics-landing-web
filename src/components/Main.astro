@@ -10,7 +10,7 @@ import coursesItems from "../data/CoursesItems";
 
 <main class="container" id="main">
   <div class="big-card">
-    <h1>Nuestros cursos</h1>
+    <h1>Conoce nuestros cursos</h1>
     <CoursesView>
       {
         coursesItems.map(item => <CourseItemView {...item} />)
@@ -35,7 +35,7 @@ import coursesItems from "../data/CoursesItems";
   #main {
     position: absolute;
     z-index: 2;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     .big-card {
@@ -43,9 +43,8 @@ import coursesItems from "../data/CoursesItems";
       height: 30rem;
       border-radius: 20px;
       h1 {
-      color: white;
+        color: white;
+      }
     }
-    }
-    
   }
 </style>
