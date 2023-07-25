@@ -3,11 +3,6 @@ import CoursesView from "./CoursesView.astro";
 import CourseItemView from "./CourseItemView.astro";
 import coursesItems from "../data/CoursesItems";
 ---
-
-<section class="video">
-  <video src="/assets/Background.mp4" autoplay loop muted></video>
-</section>
-
 <main class="container" id="main">
   <div class="big-card">
     <h1>Conoce nuestros cursos</h1>
@@ -20,30 +15,16 @@ import coursesItems from "../data/CoursesItems";
 </main>
 
 <style lang="scss">
-  .video {
-    position: relative;
-    z-index: 1;
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      widows: 100%;
-    }
-  }
-
   #main {
-    position: absolute;
-    z-index: 2;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 8rem;
     .big-card {
-      margin-top: -5rem;
-      height: 30rem;
+      height: auto;
       border-radius: 20px;
       h1 {
         color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
       }
     }
   }

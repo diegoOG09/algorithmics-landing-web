@@ -1,0 +1,9 @@
+---
+import type { CoursesInfoItem } from "../types/types";
+interface Props extends CoursesInfoItem {};
+const { infoImage } = Astro.props
+---
+
+<div>
+  <img src={infoImage} alt="Imagen 2">
+</div>

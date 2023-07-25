@@ -1,0 +1,94 @@
+<section class="algo-info">
+  <div class="container">
+    <h2>Prepárese para el hoy y el mañana</h2>
+
+    <div class="algo-grid">
+      <div class="algo-info-card">
+        <div class="algo-info-card_img">
+          <img src="/assets/illustrations/830b8cf.png" alt="">
+        </div>
+        <h3>Mejorando el rendimiento escolar</h3>
+        <p>Nos encantan las ciencias exactas, ofrecer un enfoque fresco en temas ordinarios y ayudar a los estudiantes a lograr resultados sorprendentes en la escuela</p>
+      </div>
+      <div class="algo-info-card">
+        <div class="algo-info-card_img">
+          <img src="/assets/illustrations/8ab0dbe.png" alt="">
+        </div>
+        <h3>Preparación para profesiones del futuro
+        </h3>
+        <p>Nosotros nutrimos el pensamiento matemático y evaluamos las habilidades de los niños en los campos de TI más prominentes
+        </p>
+      </div>
+      <div class="algo-info-card">
+        <div class="algo-info-card_img">
+          <img src="/assets/illustrations/3af69e9.png" alt="">
+        </div>
+        <h3>Desarrollando habilidades universales
+        </h3>
+        <p>Nosotros enseñamos el pensamiento crítico y el trabajo en equipo y no tenemos miedo de cometer errores en el camino para lograr competencias que el mundo necesita</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .algo-info {
+    color: #602A7A;
+    
+    h2 {
+      text-align: center;
+      font-size: 3.5rem;
+      background: -webkit-linear-gradient(#24A7EF, #CBF86D);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .algo-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 2rem;
+
+      .algo-info-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #efeff0;
+        //background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        border-radius: 30px;
+        padding: 1rem;
+
+        .algo-info-card_img {
+          height: 7.5rem;
+        }
+        &:nth-child(1) {
+          img {
+            width: 40%;
+          }
+        }
+        &:nth-child(2) {
+          img {
+            width: 22%;
+          }
+        }
+        &:nth-child(3) {
+          img {
+            width: 35%;
+          }
+        }
+        h3 {
+          font-size: 1.5rem;
+          line-height: 32px;
+          text-align: start;
+          letter-spacing: normal;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 24px;
+          text-align: start;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+</style>

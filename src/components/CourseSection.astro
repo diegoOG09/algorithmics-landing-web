@@ -1,0 +1,18 @@
+---
+import CoursesInfoView from "./CoursesInfoView.astro";
+import CourseInfoItemView from "./CourseInfoItemView.astro";
+import coursesInfoItems from "../data/CoursesInfoItems"
+---
+
+<section class="container">
+  <CoursesInfoView>
+    {
+      coursesInfoItems.map(item => <CourseInfoItemView {...item} />)
+    }
+  </CoursesInfoView>
+</section>
+
+<style lang="scss">
+  section {
+  }
+</style>

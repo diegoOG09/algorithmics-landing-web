@@ -8,3 +8,7 @@ export interface CoursesItem {
   course: string;
   image: string;
 }
+
+export interface CoursesInfoItem {
+  infoImage: string;
+}
