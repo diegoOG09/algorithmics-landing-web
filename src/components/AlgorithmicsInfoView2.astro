@@ -53,7 +53,7 @@
         <p>
           Los niños comparten sus proyectos directamente en la plataforma: pueden dar me gusta, comentar y encontrar amigos entre los estudiantes de Algorithmics de todo el mundo
         </p>
-        <a href="#">Únete</a>
+        <a href="https://deluxe-parfait-f5ff57.netlify.app/">Únete</a>
       </div>
     </footer>
   </div>
@@ -128,8 +128,49 @@
         }
       }
       .info-footer {
+        display: flex;
+        align-items: center;
         background-color: #FFDB59;
         border-radius: 20px;
+        padding: 2rem 2rem;
+        margin-top: 1rem;
+        
+        .info-footer_text {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          width: 40%;
+          color: #602b7a;
+          h3 {
+            font-size: 1.5rem;
+            line-height: 32px;
+            text-align: start;
+            letter-spacing: normal;
+          }
+          p {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: start;
+            letter-spacing: normal;
+          }
+          a {
+            width: 12.5%;
+            text-decoration: none;
+            background-color: #602b7a;
+            color: #FFDB59;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            padding: 1rem 2rem;
+          }
+        }
+        .info-footer_img {
+          width: 60%;
+        }
+        .info-footer_img > img {
+          width: 90%;
+        }
       }
     }
   }
