@@ -1,0 +1,141 @@
+<section class="algo-info-extra">
+  <div class="extra-info container">
+    <div>
+      <h2>Aprender, Crear, Comunicar</h2>
+    </div>
+  
+    <div>
+      <p class="main-p">
+        Todas nuestras clases son realizadas en nuestra plataforma de aprendizaje en línea. No necesita descargar ningún software nuevo, comprar libros o revisar tarea porque la plataforma de Algorithmics hace las tres
+      </p>
+    </div>
+  
+    <div class="frames-grid">
+      <!-- TARJETA 1 -->
+      <div class="frame-card">
+        <div class="frame-card_img">
+          <img src="/assets/screenshots/login-screenshotv2.png" alt="Ilustracion de marco amarillo">
+        </div>
+        <div class="frame-card_info">
+          <div class="frame-card_info__img">
+            <img src="/assets/illustrations/eyes.svg" alt="Ilustracion de ojos">
+          </div>
+          <div class="frame-card_info__text">
+            <h3>Un libro escolar <br> inteligente</h3>
+            <p>
+              Su hijo(a) aprende a su propio ritmo – nuestra plataforma analiza su progreso y sugiere tareas con el nivel de dificultad correcto
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- TARJETA 2 -->
+      <div class="frame-card">
+        <div class="frame-card_img">
+          <img src="/assets/screenshots/code-screenshotv2.png" alt="Ilustracion de laboratorio">
+        </div>
+        <div class="frame-card_info">
+          <div class="frame-card_info__text">
+            <h3 id="lab-text">Un laboratorio para los <br> proyectos</h3>
+            <p id="lab-p">
+              Nuestros estudiantes aplican su conocimiento en la práctica desde sus primeras clases: construyen juegos en Scratch o desarrollan aplicaciones en Python
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="info-footer">
+      <div class="info-footer_img">
+        <img src="/assets/screenshots/robot-screenshot.png" alt="Screenshot del ejercicio">
+      </div>
+      <div class="info-footer_text">
+        <h3>Una comunidad con intereses en común</h3>
+        <p>
+          Los niños comparten sus proyectos directamente en la plataforma: pueden dar me gusta, comentar y encontrar amigos entre los estudiantes de Algorithmics de todo el mundo
+        </p>
+        <a href="#">Únete</a>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<style lang="scss" scoped>
+  .algo-info-extra {
+    .extra-info {
+      h2 {
+        margin: 0 0 2rem 0;
+        color: #602b7a;
+        font-size: 3.5rem;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: normal;
+        line-height: 56px;
+        background: -webkit-linear-gradient(#24A7EF,#CBF86D);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .main-p {
+        background-color: #602b7a;
+        border-radius: 20px;
+        padding: 1.5rem 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 32px;
+        letter-spacing: normal;
+        color: #f5f6fa;
+        margin-bottom: 1rem;
+      }
+      .frames-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        .frame-card {
+          background-color: #602b7a;
+          border-radius: 20px;
+          padding: 1.5rem 1rem;
+          .frame-card_img > img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            width: 65%;
+          }
+          .frame-card_info {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            h3 {
+              font-size: 1.5rem;
+              color: #f5f6fa;
+              line-height: 32px;
+              text-align: start;
+              letter-spacing: normal;
+            }
+            #lab-text {
+              margin-left: 6rem;
+            }
+            p {
+              color: #f5f6fa;
+              font-size: 1rem;
+              line-height: 24px;
+              letter-spacing: normal;
+              font-weight: 500;
+            }
+            #lab-p {
+              margin-left: 6rem;
+            }
+          }
+        }
+      }
+      .info-footer {
+        background-color: #FFDB59;
+        border-radius: 20px;
+      }
+    }
+  }
+  
+</style>
+
+
+
+

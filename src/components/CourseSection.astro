@@ -4,7 +4,7 @@ import CourseInfoItemView from "./CourseInfoItemView.astro";
 import coursesInfoItems from "../data/CoursesInfoItems"
 ---
 
-<section class="container">
+<section class="container courses-info">
   <CoursesInfoView>
     {
       coursesInfoItems.map(item => <CourseInfoItemView {...item} />)
@@ -12,7 +12,8 @@ import coursesInfoItems from "../data/CoursesInfoItems"
   </CoursesInfoView>
 </section>
 
-<style lang="scss">
-  section {
+<style scoped>
+  .courses-info {
+    margin-bottom: 10rem;
   }
 </style>

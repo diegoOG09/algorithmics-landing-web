@@ -22,17 +22,17 @@ const coursesItems : CoursesItem[] = [
     image: '/assets/banners/creacion-sitios-web-removebg.webp',
   },
   {
-    age: 'Para 12-13 años',
+    age: 'Para niños de 12-13 años',
     course: 'Python Start',
     image: '/assets/banners/python-start-removebg.webp',
   },
   {
-    age: 'Para 14-17 años',
+    age: 'Para niños de 14-17 años',
     course: 'Python Pro',
     image: '/assets/banners/python-pro-removebg.webp',
   },
   {
-    age: 'Para 12-16 años',
+    age: 'Para niños de 12-16 años',
     course: 'Unity - Creación de Videojuegos',
     image: '/assets/banners/unity-removebg.webp',
   }

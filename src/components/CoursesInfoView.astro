@@ -1,10 +1,25 @@
 <div class="courses-info">
+  <h2 id="courses-info">¿Qué enseñamos en cada curso?</h2>
   <slot />
 </div>
 
 <style lang="scss">
   .courses-info {
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(2,1fr);
+    
+    h2 {
+      color: white;
+      display: flex;
+      align-items: center;
+      font-size: 3.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      background: -webkit-linear-gradient(#CBF86D, #24A7EF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 </style>
