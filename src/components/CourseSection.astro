@@ -4,7 +4,7 @@ import CourseInfoItemView from "./CourseInfoItemView.astro";
 import coursesInfoItems from "../data/CoursesInfoItems"
 ---
 
-<section class="container courses-info">
+<section id="courses-info" class="container courses-info">
   <CoursesInfoView>
     {
       coursesInfoItems.map(item => <CourseInfoItemView {...item} />)
