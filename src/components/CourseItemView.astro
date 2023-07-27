@@ -122,4 +122,42 @@ const { age, course, image } = Astro.props
       background-color: #00AF85;
     }
   }
+
+  @media only screen and (max-width: 1366px) {
+    .course {
+      height: 12rem;
+      h3 {
+        margin: 0;
+        color: #602b7a;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .meta-inf {
+        img {
+          width: 7rem;
+        }
+      }
+      
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .course {
+      height: 10rem;
+      h3 {
+        margin: 0;
+        color: #602b7a;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .meta-inf {
+        img {
+          width: 5rem;
+        }
+      }
+    }
+  }
 </style>

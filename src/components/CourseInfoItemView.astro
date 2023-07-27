@@ -11,4 +11,11 @@ const { infoImage } = Astro.props
   .image-container {
     width: auto;
   }
+  @media only screen and (max-width: 1366px) {
+    .image-container {
+      img {
+        width: 100%;
+      }
+    }
+  }
 </style>

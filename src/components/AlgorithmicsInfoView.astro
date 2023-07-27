@@ -92,4 +92,50 @@
       }
     }
   }
+
+  @media only screen and (max-width: 1366px) {
+    .algo-info {
+      .algo-grid {
+        .algo-info-card {
+          .algo-info-card_img {
+            &:nth-child(1) {
+              img {
+                width: 55%;
+              }
+            }
+          }   
+        }
+      }
+    } 
+  }
+  @media only screen and (max-width: 1024px) {
+    .algo-info {
+      .algo-grid {
+        .algo-info-card {
+          h3 {
+              font-size: 1.2rem;
+              line-height: 25px;
+              text-align: start;
+              letter-spacing: normal;
+              margin-bottom: 1rem;
+            }
+            p {
+              font-size: .95rem;
+              font-weight: 500;
+              line-height: 20px;
+              text-align: start;
+              letter-spacing: normal;
+            }
+          .algo-info-card_img {
+            height: 6rem;
+            &:nth-child(1) {
+              img {
+                width: 50%;
+              }
+            }
+          }   
+        }
+      }
+    }
+  }
 </style>

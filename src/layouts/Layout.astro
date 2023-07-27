@@ -36,7 +36,6 @@ const { title } = Astro.props;
 	}
 	body {
 		background-image: linear-gradient(to right bottom, #612e7a, #b13b78, #e96166, #ff9b54, #ffdb59);
-
 		font-family: 'Montserrat', sans-serif;
 		margin: 0;
 	}
@@ -50,5 +49,10 @@ const { title } = Astro.props;
 	}
 	h3, h4, p {
 		margin: 0;
+	}
+	@media only screen and (max-width: 1024px) {
+		.container {
+			width: 85%;
+		}
 	}
 </style>
