@@ -160,4 +160,25 @@ const { age, course, image } = Astro.props
       }
     }
   }
+  @media only screen and (max-width: 428px) {
+    .course {
+      height: 11rem;
+      h3 {
+        margin: 0;
+        color: #602b7a;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      span {
+        font-size: .8rem;
+      }
+      .meta-inf {
+        img {
+          width: 5rem;
+        }
+      }
+    }
+  }
 </style>

@@ -11,7 +11,7 @@
       </div>
       <div class="algo-info-card">
         <div class="algo-info-card_img">
-          <img src="/assets/illustrations/8ab0dbe.png" alt="">
+          <img id="calamar" src="/assets/illustrations/8ab0dbe.png" alt="">
         </div>
         <h3>Preparación para profesiones del futuro
         </h3>
@@ -113,19 +113,19 @@
       .algo-grid {
         .algo-info-card {
           h3 {
-              font-size: 1.2rem;
-              line-height: 25px;
-              text-align: start;
-              letter-spacing: normal;
-              margin-bottom: 1rem;
-            }
-            p {
-              font-size: .95rem;
-              font-weight: 500;
-              line-height: 20px;
-              text-align: start;
-              letter-spacing: normal;
-            }
+            font-size: 1.2rem;
+            line-height: 25px;
+            text-align: start;
+            letter-spacing: normal;
+            margin-bottom: 1rem;
+          }
+          p {
+            font-size: .95rem;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: start;
+            letter-spacing: normal;
+          }
           .algo-info-card_img {
             height: 6rem;
             &:nth-child(1) {
@@ -136,6 +136,29 @@
           }   
         }
       }
+    }
+  }
+  @media only screen and (max-width: 428px) {
+    .algo-info {
+      margin-bottom: 5rem;
+      h2 {
+        text-align: start;
+        font-size: 3rem;
+      }
+        .algo-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          .algo-info-card {
+            .algo-info-card_img {
+              height: 6rem;
+              #calamar {
+                width: 30%;
+              }
+            }
+          }
+        }
     }
   }
 </style>
