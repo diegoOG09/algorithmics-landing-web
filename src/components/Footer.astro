@@ -1,10 +1,10 @@
 <footer class="container" id="footer">
   <div>
-    <img src="/assets/logo_header.svg" alt="">
+    <img src="/assets/logo_header.svg" alt="Logo Algorithmics">
   </div>
   <div class="footer-info">
     <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.6989002310543!2d-99.55479562400308!3d19.251949946423746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8ac4daf1aaab%3A0x29d11737945f1743!2sAlgorithmics%20Metepec!5e0!3m2!1ses-419!2smx!4v1688585918374!5m2!1ses-419!2smx" width="300" height="400" style="border:0" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <a href="#">VOLVER AL INICIO</a>
+    <a href="#inicio"><span>&#8593;</span> VOLVER AL INICIO <span>&#8593;</span></a>
     <span>Contáctanos: 729 374 4649</span>
   </div>
 </footer>
@@ -22,12 +22,26 @@
       font-weight: 700;
     }
     span {
+      text-transform: uppercase;
       color: #602b7a;
       font-weight: 700;
     }
   }
 
 @media only screen and (max-width: 428px) {
-  
+  #footer {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    img {
+      margin-bottom: 1rem;
+    }
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
 }
 </style>
