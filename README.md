@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Algorithmics Landing Page: Basics
 
 ```
 npm create astro@latest -- --template basics
