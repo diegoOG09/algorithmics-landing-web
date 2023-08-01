@@ -20,4 +20,12 @@ const { title, url } = Astro.props;
       border-radius: 10px;
     }
   }
+  @media only screen and (max-width: 428px) {
+    li {
+      width: 100%;
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
 </style>
