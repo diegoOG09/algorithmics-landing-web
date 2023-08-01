@@ -125,7 +125,7 @@ const { age, course, image } = Astro.props
 
   @media only screen and (max-width: 1366px) {
     .course {
-      height: 12rem;
+      height: auto;
       h3 {
         margin: 0;
         color: #602b7a;
@@ -144,7 +144,7 @@ const { age, course, image } = Astro.props
   }
   @media only screen and (max-width: 1024px) {
     .course {
-      height: 10rem;
+      height: auto;
       h3 {
         margin: 0;
         color: #602b7a;
@@ -157,6 +157,14 @@ const { age, course, image } = Astro.props
         img {
           width: 5rem;
         }
+      }
+    }
+  }
+  @media only screen and (max-width: 1440px) {
+    .course {
+      height: auto;
+      h3 {
+        font-size: 1rem;
       }
     }
   }
