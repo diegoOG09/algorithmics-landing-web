@@ -4,8 +4,8 @@
   </div>
   <div class="footer-info">
     <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.6989002310543!2d-99.55479562400308!3d19.251949946423746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8ac4daf1aaab%3A0x29d11737945f1743!2sAlgorithmics%20Metepec!5e0!3m2!1ses-419!2smx!4v1688585918374!5m2!1ses-419!2smx" width="300" height="400" style="border:0" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <a href="#inicio"><span>&#8593;</span> VOLVER AL INICIO <span>&#8593;</span></a>
-    <span>Contáctanos: 729 374 4649</span>
+    <a href="#inicio"></><i class="fa-solid fa-house"></i> VOLVER AL INICIO </a>
+    <span class="contact"><i class="fa-solid fa-phone"></i> Contáctanos: 729 374 4649</span>
   </div>
 </footer>
 
@@ -13,9 +13,29 @@
   #footer {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    .footer-info {
+      display: flex;
+      align-items: center;
+      a {
+        color: white;
+        background-color: #602b7a;
+        padding: 4.1rem 1rem;
+        span {
+          color: white;
+        }
+      }
+      .contact {
+        color: white;
+        background-color: #00AF85;
+        padding: 4.1rem 1rem;
+        border-radius: 0 20px 20px 0;
+      }
+    }
     #map {
       height: 50%;
-      border-radius: 20px;
+      border-radius: 20px 0 0 20px;
     }
     a {
       text-decoration: none;
@@ -40,7 +60,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 0;
+      #map {
+        border-radius: 20px 20px 0 0;
+      }
+      a {
+        padding: 2rem 3.9rem;
+      }
+      .contact {
+        border-radius: 0 0 20px 20px;
+        padding: 2rem 1rem;
+      }
     }
   }
 }
