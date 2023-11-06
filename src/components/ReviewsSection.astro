@@ -1,5 +1,45 @@
-<section class="container">
+<script>
+  import fetchData from "../firebase/fetch";
+  fetchData()
+</script>
+
+<section id="quotes-section" class="container">
   <h2>¿Ya has tomado cursos con nosotros?</h2>
-  <p>¡Deja una reseña! <i class="fa-solid fa-quote-left"></i></p>
-  
+  <p>Deja un comentario <i class="fa-regular fa-comment-dots"></i></p>
+  <div id="quotes-container"></div>
 </section>
+
+<style lang="scss" scoped>
+  #quotes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      text-align: center;
+      background: -webkit-linear-gradient(#24A7EF,#CBF86D);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    p {
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    #quotes-container {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      background-color: #DDFFBB;
+      border-radius: 39px;
+      padding: 3rem;
+    }
+  }
+  
+</style>

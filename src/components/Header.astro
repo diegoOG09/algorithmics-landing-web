@@ -8,7 +8,7 @@ import menuItems from '../data/MenuItems';
   <div class="header-content container">
     <div class="logo-content">
       <a class="logo" href="/">
-        <img src="/assets/logo_header.svg" alt="Logo">
+        <img src="/assets/logo.jpeg" alt="Logo">
       </a>
       <span>Escuela internacional <br> de programación</span>
     </div>
@@ -24,6 +24,7 @@ import menuItems from '../data/MenuItems';
 <style lang="scss">
   header {
     width: 100%;
+    margin-bottom: 2rem;
     .header-content {
       display: flex;
       align-items: center;
@@ -34,8 +35,14 @@ import menuItems from '../data/MenuItems';
         display: flex;
         flex-direction: column;
         span {
-          font-size: .8rem;
-          color: rgb(197, 197, 197);
+          font-size: .9rem;
+          font-weight: 500;
+          color: #602B7B;
+        }
+        .logo {
+          img {
+            width: 10rem;
+          }
         }
       }
     }

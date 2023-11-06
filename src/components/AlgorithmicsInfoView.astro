@@ -1,17 +1,53 @@
+<script>
+  // Obtiene todas las imágenes que deben girar
+const imagesToRotate = document.querySelectorAll('.rotate-on-scroll');
+
+// Función para verificar si una imagen está en el viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function handleAnimationEnd(event) {
+  event.target.classList.remove('rotate');
+}
+
+imagesToRotate.forEach((image) => {
+  image.addEventListener('animationend', handleAnimationEnd);
+});
+
+// Función para manejar el evento de scroll y aplicar la animación una vez
+function handleScroll() {
+  imagesToRotate.forEach((image) => {
+    if (isInViewport(image) && !image.classList.contains('rotate')) {
+      image.classList.add('rotate');
+    }
+  });
+}
+
+// Agrega un evento de scroll para manejar la animación
+window.addEventListener('scroll', handleScroll);
+</script>
+
 <section class="algo-info">
   <div class="container">
     <h2>Prepárese para el hoy y el mañana</h2>
     <div class="algo-grid">
       <div class="algo-info-card">
         <div class="algo-info-card_img">
-          <img src="/assets/illustrations/830b8cf.png" alt="">
+          <img class="rotate-on-scroll" src="/assets/illustrations/830b8cf.png" alt="">
         </div>
         <h3>Mejorando el rendimiento escolar</h3>
         <p>Nos encantan las ciencias exactas, ofrecer un enfoque fresco en temas ordinarios y ayudar a los estudiantes a lograr resultados sorprendentes en la escuela</p>
       </div>
       <div class="algo-info-card">
-        <div class="algo-info-card_img">
-          <img id="calamar" src="/assets/illustrations/8ab0dbe.png" alt="">
+        <div class="algo-info-card_img scaling-animation">
+          <img class="rotate-on-scroll" id="calamar" src="/assets/illustrations/8ab0dbe.png" alt="">
         </div>
         <h3>Preparación para profesiones del futuro
         </h3>
@@ -19,8 +55,8 @@
         </p>
       </div>
       <div class="algo-info-card">
-        <div class="algo-info-card_img">
-          <img src="/assets/illustrations/3af69e9.png" alt="">
+        <div class="algo-info-card_img scaling-animation">
+          <img class="rotate-on-scroll" src="/assets/illustrations/3af69e9.png" alt="">
         </div>
         <h3>Desarrollando habilidades universales
         </h3>
@@ -55,11 +91,25 @@
         flex-direction: column;
         background-color: #f5f6fa;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-        border-radius: 10px;
+        border-radius: 39px;
         padding: 1.5rem;
 
         .algo-info-card_img {
+          padding-left: 1rem;
           height: 7.5rem;
+        }
+        .algo-info-card_img img {
+        }
+        .rotate {
+          animation: rotate 2s linear;
+        }
+        @keyframes rotate {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
         }
         &:nth-child(1) {
           img {

@@ -53,7 +53,7 @@
         <p>
           Los niños comparten sus proyectos directamente en la plataforma: pueden dar me gusta, comentar y encontrar amigos entre los estudiantes de Algorithmics de todo el mundo
         </p>
-        <a href="https://deluxe-parfait-f5ff57.netlify.app/">Únete</a>
+        <a target="_blank" href="https://clases-algorithmics.netlify.app/">Únete</a>
       </div>
     </footer>
   </div>
@@ -78,7 +78,7 @@
       }
       .main-p {
         background-color: #602b7a;
-        border-radius: 20px;
+        border-radius: 39px;
         padding: 1.5rem 1rem;
         font-size: 1.5rem;
         font-weight: 500;
@@ -86,16 +86,21 @@
         line-height: 32px;
         letter-spacing: normal;
         color: #f5f6fa;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
       }
       .frames-grid {
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap: 1rem;
+        gap: .5rem;
         .frame-card {
           background-color: #602b7a;
-          border-radius: 20px;
           padding: 1.5rem 1rem;
+          &:first-child {
+            border-radius: 39px 19px 19px 39px;
+          }
+          &:nth-child(2) {
+            border-radius: 19px 39px 39px 19px;
+          }
           .frame-card_img > img {
             display: block;
             margin: 0 auto;
@@ -133,9 +138,9 @@
         display: flex;
         align-items: center;
         background-color: #FFDB59;
-        border-radius: 20px;
+        border-radius: 39px;
         padding: 2rem 2rem;
-        margin-top: 1rem;
+        margin-top: .5rem;
         
         .info-footer_text {
           display: flex;
