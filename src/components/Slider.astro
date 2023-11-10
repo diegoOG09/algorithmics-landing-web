@@ -1,0 +1,110 @@
+<div class="slider-container">
+  <i class="fas fa-square-caret-left slider-btn" id="prev-button"></i>
+  <div class="slider">
+    <img id="slider-image" src="" alt="Imagen 1">
+  </div>
+  <i class="fas fa-square-caret-right slider-btn" id="next-button"></i>
+</div>
+
+<style lang="scss" scoped>
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    .slider-btn {
+      color: #602B7A;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .slider {
+      background-color: #f5f6fa;
+      border-radius: 39px;
+      padding: 2rem 2rem;
+      max-width: 50%;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.15);
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 29px;
+        opacity: 1;
+        transition: opacity 1s;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 428px) {
+    .slider-container {
+      gap: 1rem;
+      .slider {
+        padding: 1rem 1rem;
+        max-width: 60%;
+      }
+    }
+  }
+</style>
+
+<script>
+  import { storage } from "../firebase/client";
+  import { ref, getDownloadURL } from "firebase/storage";
+
+  let imageChangeInterval: NodeJS.Timeout | undefined;
+
+  function startImageChangeInterval() {
+    imageChangeInterval = setInterval(() => {
+        showNextImage();
+    }, 5000);
+  }
+
+  startImageChangeInterval();
+
+  const images = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'];
+
+  let currentIndex = 0;
+
+  const sliderImage = document.getElementById('slider-image') as HTMLImageElement;
+  const prevButton = document.getElementById('prev-button') as HTMLElement
+  const nextButton = document.getElementById('next-button') as HTMLElement
+
+  async function changeImage(index: number) {
+    sliderImage.style.opacity = '0';
+    try {
+      const imageURL = await getDownloadURL(ref(storage, `${images[index]}`))
+      const newImage = new Image();
+      newImage.src = imageURL;
+      newImage.onload = function() {
+        sliderImage.src = imageURL;
+        currentIndex = index;
+        sliderImage.style.opacity = '1';
+
+        clearInterval(imageChangeInterval);
+        startImageChangeInterval();
+      }    
+    } catch (error) {
+      console.error('Error al obtener la URL de descarga:', error)
+    }
+  }
+
+  function showPrevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    changeImage(currentIndex)
+  }
+
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    changeImage(currentIndex)
+  }
+
+  prevButton.addEventListener('click', () => {
+    clearInterval(imageChangeInterval);
+    showPrevImage();
+  });
+  nextButton.addEventListener('click', () => {
+    clearInterval(imageChangeInterval);
+    showNextImage();
+  });
+
+  changeImage(currentIndex)
+</script>
