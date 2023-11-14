@@ -13,6 +13,9 @@ export interface CoursesItem {
   title_color: string;
   p_color: string;
   button_color: string;
+  text_button_color: string;
+  // content: string;
+  // metodology: string;
 }
 
 export interface CoursesInfoItem {

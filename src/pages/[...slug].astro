@@ -1,11 +1,10 @@
 ---
 import Header from '../components/Header.astro';
-import { ViewTransitions } from 'astro:transitions';
 export async function getStaticPaths() {
   const pages = [
     {
       slug: 'courses/alfabetizacion-digital',
-      title: 'Alfabetizacion digital',
+      title: 'Alfabetización Digital',
       image: '/assets/banners/alfabetizacion-digital-removebg.webp',
       text: 'Un curso para niños de 7-9 años',
       color: '#3aa7ee',
@@ -13,10 +12,11 @@ export async function getStaticPaths() {
       title_color: '#fff',
       p_color: '#fff',
       button_color: '#e2f6fe',
+      text_button_color: '#5b2b7a',
     },
     {
       slug: 'courses/programacion-visual',
-      title: 'Programacion Visual',
+      title: 'Programación Visual',
       image: '/assets/banners/programacion-visual-removebg.webp',
       text: 'Un curso para niños de 9-10 años',
       color: '#f44c75',
@@ -24,6 +24,7 @@ export async function getStaticPaths() {
       title_color: '#fdf06b',
       p_color: '#fff',
       button_color: '#602b7a',
+      text_button_color: '#fff',
     },
     {
       slug: 'courses/diseño-de-videojuegos',
@@ -35,10 +36,11 @@ export async function getStaticPaths() {
       title_color: '#602b7a',
       p_color: '#f53496',
       button_color: '#602b7a',
+      text_button_color: '#fff',
     },
     {
       slug: 'courses/creacion-de-sitios-web',
-      title: 'Creación de sitios web',
+      title: 'Creación de Sitios Web',
       image: '/assets/banners/creacion-sitios-web-removebg.webp',
       text: 'Un curso para niños de 10-11 años',
       color: '#cbf86d',
@@ -46,6 +48,7 @@ export async function getStaticPaths() {
       title_color: '#613b75',
       p_color: '#66c427',
       button_color: '#61337c',
+      text_button_color: '#ec507d',
     },
     {
       slug: 'courses/python-start',
@@ -57,6 +60,7 @@ export async function getStaticPaths() {
       title_color: '#6ada41',
       p_color: '#fff',
       button_color: '#f66658',
+      text_button_color: '#6ada41',
     },
     {
       slug: 'courses/python-pro',
@@ -68,6 +72,7 @@ export async function getStaticPaths() {
       title_color: '#fff',
       p_color: '#fff',
       button_color: '#40d259',
+      text_button_color: '#f66558',
     },
     {
       slug: 'courses/unity-creacion-de-videojuegos',
@@ -79,17 +84,18 @@ export async function getStaticPaths() {
       title_color: '#fff',
       p_color: '#fff',
       button_color: '#fff',
+      text_button_color: '#602b7a',
     },
   ];
-  return pages.map(({ slug, title, text, color, border_color, image, title_color, p_color, button_color }) => {
+  return pages.map(({ slug, title, text, color, border_color, image, title_color, p_color, button_color, text_button_color }) => {
     return {
       params: { slug },
-      props: { title, text, color, border_color, image, title_color, p_color, button_color },
+      props: { title, text, color, border_color, image, title_color, p_color, button_color, text_button_color },
     }
   })
 }
 
-const { title, text, color, border_color, image, title_color, p_color, button_color } = Astro.props;
+const { title, text, color, border_color, image, title_color, p_color, button_color, text_button_color } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -97,7 +103,7 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/main.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -105,7 +111,6 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
 		<meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width", initial-scale=1.0" />
     <title>{title}</title>
-    <ViewTransitions />
   </head>
   <body>
     <div class="header-component container">
@@ -116,11 +121,17 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
         <div class="text-content">
           <h1 style={`color: ${title_color}`}>{title}</h1>
           <p style={`color: ${p_color}`}>{text}</p>
+          <a style={`background-color: ${button_color}; color: ${text_button_color}`} href="https://clases-algorithmics.netlify.app/">Registrarse</a>
         </div>
         <div class="image-content">
           <img src={image} alt="Illustrative course image">
         </div>
       </div>
+    </div>
+
+    <div class="course-content container">
+      <h2>Su hijo(a) aprenderá</h2>
+      
     </div>
   </body>
 </html>
@@ -162,6 +173,13 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
         p {
           font-weight: 500;
           font-size: 1.5rem;
+          margin-bottom: 3rem;
+        }
+        a {
+          padding: 1rem;
+          border-radius: 19px;
+          text-decoration: none;
+          font-weight: 500;
         }
       }
       .image-content {

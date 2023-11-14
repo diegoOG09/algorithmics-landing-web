@@ -11,6 +11,7 @@ const coursesItems : CoursesItem[] = [
     title_color: '#fff',
     p_color: '#fff',
     button_color: '#e2f6fe',
+    text_button_color: '#5b2b7a',
   },
   {
     course: 'Programación visual',
@@ -22,6 +23,7 @@ const coursesItems : CoursesItem[] = [
     title_color: '#fdf06b',
     p_color: '#fff',
     button_color: '#602b7a',
+    text_button_color: '#fff',
   },
   {
     course: 'Diseño de videojuegos',
@@ -33,6 +35,7 @@ const coursesItems : CoursesItem[] = [
     title_color: '#602b7a',
     p_color: '#f53496',
     button_color: '#602b7a',
+    text_button_color: '#fff',
   },
   {
     course: 'Creación de Sitios Web',
@@ -44,6 +47,7 @@ const coursesItems : CoursesItem[] = [
     title_color: '#613b75',
     p_color: '#66c427',
     button_color: '#61337c',
+    text_button_color: '#ec507d',
   },
   {
     course: 'Python Start',
@@ -55,6 +59,7 @@ const coursesItems : CoursesItem[] = [
     title_color: '#6ada41',
     p_color: '#fff',
     button_color: '#f66658',
+    text_button_color: '#6ada41',
   },
   {
     course: 'Python Pro',
@@ -66,6 +71,7 @@ const coursesItems : CoursesItem[] = [
     title_color: '#fff',
     p_color: '#fff',
     button_color: '#40d259',
+    text_button_color: '#f66558',
   },
   {
     course: 'Unity - Creación de Videojuegos',
@@ -77,6 +83,7 @@ const coursesItems : CoursesItem[] = [
     title_color: '#fff',
     p_color: '#fff',
     button_color: '#fff',
+    text_button_color: '#602b7a',
   }
 ]
 
