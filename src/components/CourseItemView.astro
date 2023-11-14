@@ -1,9 +1,9 @@
 ---
 import type { CoursesItem } from "../types/types";
 interface Props extends CoursesItem {};
-const { age, course, image } = Astro.props
+const { age, course, image, link } = Astro.props
 ---
-<a class="course" id="course" href="#courses-info">
+<a class="course" id="course" href={link}>
   <div >
     <div class="meta-inf">
       <span>{age}</span>

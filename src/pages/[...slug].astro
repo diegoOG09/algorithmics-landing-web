@@ -1,0 +1,180 @@
+---
+import Header from '../components/Header.astro';
+import { ViewTransitions } from 'astro:transitions';
+export async function getStaticPaths() {
+  const pages = [
+    {
+      slug: undefined,
+      title: 'Pagina de Algorithmics Metepec',
+      text: 'Te damos la bienvenida!',
+    },
+    {
+      slug: 'courses/alfabetizacion-digital',
+      title: 'Alfabetizacion digital',
+      image: '/assets/banners/alfabetizacion-digital-removebg.webp',
+      text: 'Un curso para niños de 7-9 años',
+      color: '#3aa7ee',
+      border_color: '#e2f6fe',
+      title_color: '#fff',
+      p_color: '#fff',
+      button_color: '#e2f6fe',
+    },
+    {
+      slug: 'courses/programacion-visual',
+      title: 'Programacion Visual',
+      image: '/assets/banners/programacion-visual-removebg.webp',
+      text: 'Un curso para niños de 9-10 años',
+      color: '#f44c75',
+      border_color: '#fdf06b',
+      title_color: '#fdf06b',
+      p_color: '#fff',
+      button_color: '#602b7a',
+    },
+    {
+      slug: 'courses/diseño-de-videojuegos',
+      title: 'Diseño de Videojuegos',
+      image: '/assets/banners/diseño-videojuegos-removebg.webp',
+      text: 'Un curso para niños de 10-11 años',
+      color: '#fbdb59',
+      border_color: '#fef7d9',
+      title_color: '#602b7a',
+      p_color: '#f53496',
+      button_color: '#602b7a',
+    },
+    {
+      slug: 'courses/creacion-de-sitios-web',
+      title: 'Creación de sitios web',
+      image: '/assets/banners/creacion-sitios-web-removebg.webp',
+      text: 'Un curso para niños de 10-11 años',
+      color: '#cbf86d',
+      border_color: '#ec507d',
+      title_color: '#613b75',
+      p_color: '#66c427',
+      button_color: '#61337c',
+    },
+    {
+      slug: 'courses/python-start',
+      title: 'Python Start',
+      image: '/assets/banners/python-start-removebg.webp',
+      text: 'Un curso para niños de 12-13 años',
+      color: '#7d28a6',
+      border_color: '#f66658',
+      title_color: '#6ada41',
+      p_color: '#fff',
+      button_color: '#f66658',
+    },
+    {
+      slug: 'courses/python-pro',
+      title: 'Python Pro',
+      image: '/assets/banners/python-pro-removebg.webp',
+      text: 'Un curso para niños de 14-17 años',
+      color: '#602a7a',
+      border_color: '#f66558',
+      title_color: '#fff',
+      p_color: '#fff',
+      button_color: '#40d259',
+    },
+    {
+      slug: 'courses/unity-creacion-de-videojuegos',
+      title: 'Unity - Creación de Videojuegos',
+      image: '/assets/banners/unity-removebg.webp',
+      text: 'Un curso para niños de 12-16 años',
+      color: '#36af85',
+      border_color: '#5ed0a4',
+      title_color: '#fff',
+      p_color: '#fff',
+      button_color: '#fff',
+    },
+  ];
+  return pages.map(({ slug, title, text, color, border_color, image, title_color, p_color, button_color }) => {
+    return {
+      params: { slug },
+      props: { title, text, color, border_color, image, title_color, p_color, button_color },
+    }
+  })
+}
+
+const { title, text, color, border_color, image, title_color, p_color, button_color } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width", initial-scale=1.0" />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <div class="header-component container">
+      <Header />
+    </div>
+    <div class="header" style={`background-color: ${color}`}>
+      <div class="header-content container" style={`border: 10px solid ${border_color}`}>
+        <div class="text-content">
+          <h1 style={`color: ${title_color}`}>{title}</h1>
+          <p style={`color: ${p_color}`}>{text}</p>
+        </div>
+        <div class="image-content">
+          <img src={image} alt="Illustrative course image">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style lang="scss" scoped>
+  .container {
+		width: 70%;
+		margin: 0 auto;
+	}
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: white;
+		background-repeat: no-repeat;
+		font-family: 'Montserrat', sans-serif;
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .header {
+    padding: 8rem 0 8rem 4rem;
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      color: white;
+      padding: 5rem 0 5rem 4rem;
+      border-radius: 39px;
+      .text-content {
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-weight: 500;
+          font-size: 1.5rem;
+        }
+      }
+      .image-content {
+        width: 20%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+</style>
