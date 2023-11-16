@@ -23,8 +23,8 @@ const coursesItems : CoursesItem[] = [
     online_2: 'No pierdas tiempo transportándote',
     online_3: 'Hasta 6 niños por grupo',
     inperson_1: 'Esta opción no está disponible por el momento',
-    inperson_2: '',
-    inperson_3: '',
+    inperson_2: 'Esta opción no está disponible por el momento',
+    inperson_3: 'Esta opción no está disponible por el momento',
   },
   {
     course: 'Programación visual',

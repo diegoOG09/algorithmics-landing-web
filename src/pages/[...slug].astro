@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 export async function getStaticPaths() {
   const pages = [
     {
@@ -24,8 +25,8 @@ export async function getStaticPaths() {
       online_2: 'No pierdas tiempo transportándote',
       online_3: 'Hasta 6 niños por grupo',
       inperson_1: 'Esta opción no está disponible por el momento',
-      inperson_2: '',
-      inperson_3: '',
+      inperson_2: 'Esta opción no está disponible por el momento',
+      inperson_3: 'Esta opción no está disponible por el momento',
     },
     {
       slug: 'courses/programacion-visual',
@@ -244,15 +245,15 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
       </div>
       <h3>Elija el formato que mas le convenga</h3>
       <div class="metodology-grid">
-        <div class="metodology-card">
+        <div style={`border: 10px solid ${border_color}`} class="metodology card">
           <ul>
             <li>{metodology_1}</li>
             <li>{metodology_2}</li>
             <li>{metodology_3}</li>
           </ul>
         </div>
-        <div class="metodology-card">
-          <h4>Online</h4>
+        <div class="online card">
+          <h4> <i class="fa-solid fa-house-laptop"></i> Online</h4>
           <div>
             <ul>
               <li>{online_1}</li>
@@ -261,8 +262,8 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
             </ul>
           </div>
         </div>
-        <div class="metodology-card">
-          <h4>Presencial</h4>
+        <div class="inperson card">
+          <h4><i class="fa-solid fa-location-dot"></i> Presencial</h4>
           <div>
             <ul>
               <li>{inperson_1}</li>
@@ -273,6 +274,7 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
         </div>
       </div>
     </div>
+    <Footer />
   </body>
 </html>
 
@@ -334,6 +336,7 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
 
   .course-content {
     width: 50%;
+    margin-bottom: 10rem;
     color: #602b7a;
     h2 {
       font-size: 4rem;
@@ -349,10 +352,11 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
     .content {
       display: flex;
       gap: 2rem;
+      margin-bottom: 8rem;
       .numbers {
         display: flex;
         flex-direction: column;
-        gap: 4.5rem;
+        gap: 5rem;
         .numbers-item {
           display: flex;
           gap: 2rem;
@@ -366,7 +370,7 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
             border-radius: 50%;
           }
           p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 500;
             margin: 0;
           }
@@ -376,11 +380,27 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
     .metodology-grid {
       display: flex;
       flex-direction: row;
-      gap: 2rem;
-      .metodology-card {
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        border-radius: 39px;
-        padding: 1.4rem;
+      gap: 2.5rem;
+      .card {
+        h4 {
+          font-size: 2rem;
+          font-weight: 900;
+          margin: 1rem 0 1.5rem 0;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem;
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin: 0;
+          padding: 0;
+          padding-left: 1rem;
+        }
+        &:nth-child(1) {
+          border-radius: 39px;
+          padding: 2.5rem;
+        }
       }
     }
   }
