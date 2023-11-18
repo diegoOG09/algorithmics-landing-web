@@ -24,9 +24,9 @@ export async function getStaticPaths() {
       online_1: 'Acceso a las clases desde cualquier parte del mundo',
       online_2: 'No pierdas tiempo transportándote',
       online_3: 'Hasta 6 niños por grupo',
-      inperson_1: 'Esta opción no está disponible por el momento',
-      inperson_2: 'Esta opción no está disponible por el momento',
-      inperson_3: 'Esta opción no está disponible por el momento',
+      inperson_1: 'Clases en la escuela de Algorithmics',
+      inperson_2: 'Interacción en persona con el maestro y los compañeros de clase',
+      inperson_3: 'Hasta 6 niños por grupo',
     },
     {
       slug: 'courses/programacion-visual',
@@ -68,7 +68,7 @@ export async function getStaticPaths() {
       content_2: 'Desarrollar contenido y personajes interesantes, y seleccionar una estrategia de juego que quieren usar',
       content_3: 'Crear juegos usando el motor Roblox Studio y escribir script para estos en el lenguaje de programación Lua',
       content_4: 'Finalizar y promocionar un juego en la plataforma Roblox y atraer nuevos jugadores a este',
-      metodology_1: 'Longitud: 1 año académico',
+      metodology_1: 'Duración: 1 año académico',
       metodology_2: 'Estudiar toma lugar los días de semana después de la escuela o los fines de semana',
       metodology_3: 'Una clase dura 90 minutos con un descanso a la mitad',
       online_1: 'Tome las clases en cualquier parte del mundo',
@@ -93,7 +93,7 @@ export async function getStaticPaths() {
       content_2: 'Escribir código HMTL y CSS, y adaptar su sitio web para dispositivos móviles',
       content_3: 'Ser parte de un equipo: distribuirán tareas y asumirán la responsabilidad de su trabajo',
       content_4: 'Desarrollar de manera independiente sitios sofisticados aplicando principios de UX y UI',
-      metodology_1: 'Longitud: 1 año académico',
+      metodology_1: 'Duración: 1 año académico',
       metodology_2: 'Estudiar toma lugar los días de semana después de la escuela o los fines de semana',
       metodology_3: 'Una clase dura 90 minutos con un descanso a la mitad',
       online_1: 'Tome las clases en cualquier parte del mundo',
@@ -168,7 +168,7 @@ export async function getStaticPaths() {
       content_2: 'Escribir código en C#, trabajar con scripts, variables, tipos de datos, etc.',
       content_3: 'Planificar su trabajo en el proyecto, actuar en equipo y presentar los resultados',
       content_4: 'Diseñar niveles de juego como un diseñador de niveles real y presentar los resultados de su trabajo',
-      metodology_1: 'Longitud: 32 lecciones',
+      metodology_1: 'Duración: 32 lecciones',
       metodology_2: 'Las clases tienen lugar entre semana después del colegio o los fines de semana',
       metodology_3: 'Una clase dura 90 minutos con un descanso a la mitad',
       online_1: 'Tome las clases en cualquier parte del mundo',
@@ -246,6 +246,7 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
       <h3>Elija el formato que mas le convenga</h3>
       <div class="metodology-grid">
         <div style={`border: 10px solid ${border_color}`} class="metodology card">
+          <i class="fa-solid fa-list-check"></i>
           <ul>
             <li>{metodology_1}</li>
             <li>{metodology_2}</li>
@@ -381,6 +382,12 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
       display: flex;
       flex-direction: row;
       gap: 2.5rem;
+      .metodology {
+        i {
+          font-size: 2rem;
+          padding-bottom: 1rem;
+        }
+      }
       .card {
         h4 {
           font-size: 2rem;
