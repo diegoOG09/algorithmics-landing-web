@@ -411,4 +411,151 @@ const { title, text, color, border_color, image, title_color, p_color, button_co
       }
     }
   }
+
+  @media only screen and (max-width: 428px) {
+    .header-component {
+      width: 90%;
+    }
+    .header {
+      width: 95%;
+      padding: 4rem 1rem 4rem 1rem;
+      .header-content {
+        flex-direction: column;
+        gap: 4rem;
+        padding: 3rem 0rem 3rem 0rem;
+        width: 85%;
+        .text-content {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          align-items: center;
+          h1 {
+            font-size: 1.5rem;
+            font-weight: 900;
+          }
+          p {
+            margin: 0;
+            font-size: 1rem;
+          }
+        }
+        .image-content {
+          width: 70%;
+          img {
+            width: 90%;
+          }
+        }
+      }
+    }
+    .course-content {
+      margin-top: 4rem;
+      width: 85%;
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin-bottom: 5rem;
+      }
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 900;
+      }
+      ol > li {
+        font-size: 1.2rem;
+      }
+      .content {
+        gap: 2rem;
+        margin-bottom: 8rem;
+        .numbers {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          .numbers-item {
+            display: flex;
+            gap: 1.5rem;
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: 700;
+              min-width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+            p {
+              font-size: 1.1rem;
+              font-weight: 500;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .metodology-grid {
+        flex-direction: column;
+        gap: 2.5rem;
+        .card {
+          h4 {
+            font-size: 2rem;
+          }
+          ul {
+            gap: 1.5rem;
+            li {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 970px) {
+    .header {
+      .header-content {
+        gap: 0;
+        .text-content {
+          h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+        .image-content {
+          width: 50%;
+          img {
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    .course-content {
+      width: 70%;
+      h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 5rem;
+      }
+      h3 {
+        font-size: 3rem;
+        font-weight: 900;
+      }
+      ol > li {
+        font-size: 1.2rem;
+      }
+      .metodology-grid {
+        gap: 2.5rem;
+        .card {
+          h4 {
+            font-size: 2rem;
+          }
+          ul {
+            gap: 1.5rem;
+            li {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
