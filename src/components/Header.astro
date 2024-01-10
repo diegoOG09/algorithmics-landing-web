@@ -56,4 +56,27 @@ import menuItems from '../data/MenuItems';
       }
     }
   }
+
+  @media only screen and (max-width: 375px) {
+    header {
+      .header-content {
+        align-items: start;
+        flex-direction: row;
+        gap: 1rem;
+
+        .logo-content {
+          span {
+            font-size: .7rem;
+            font-weight: 500;
+            color: #602B7B;
+          }
+          .logo {
+            img {
+              width: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
