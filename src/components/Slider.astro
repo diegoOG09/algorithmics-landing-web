@@ -8,6 +8,8 @@
 
 <style lang="scss" scoped>
   .slider-container {
+    width: 70%;
+    margin: 0 auto;
     margin-bottom: 2rem;
     gap: 2rem;
     .slider-btn {
@@ -18,7 +20,7 @@
     .slider {
       background-color: #f5f6fa;
       border-radius: 0px;
-      max-width: 50%;
+      max-width: 100%;
       text-align: center;
       overflow: hidden;
       img {
@@ -32,6 +34,7 @@
 
   @media only screen and (max-width: 428px) {
     .slider-container {
+      width: 100%;
       gap: .5rem;
       .slider {
         padding: 0;
@@ -39,9 +42,7 @@
       }
     }
   }
-  @media only screen and (max-width: 375px) {
-    
-  }
+
 </style>
 
 <script>
